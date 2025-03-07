@@ -3,9 +3,6 @@ language: python
 runtimeConfig:
   start:
     - "python main.py"
-database:
-  migrate:
-    - echo 'No migrations specified'
 telemetry:
   logs:
     logLevel: INFO
