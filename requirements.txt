@@ -1,1 +1,8 @@
 dbos==0.22.0
+schedule
+ccxt
+pandas
+numpy
+scipy
+cryptography
+python-binance
