@@ -5,4 +5,4 @@ runtimeConfig:
     - "python main.py"
 telemetry:
   logs:
-    logLevel: INFO
+    logLevel: DEBUG
