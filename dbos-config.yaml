@@ -1,10 +1,11 @@
-app:
-  name: "trading-bot"
-  version: "1.0"
-
-deployment:
-  runtime: "python"
-  entrypoint: "main.py" 
-resources:
-  cpu: "2"
-  memory: "4GB"
+name: trading_bot_watcher_73
+language: python
+runtimeConfig:
+  start:
+    - "python run main.py"
+database:
+  migrate:
+    - echo 'No migrations specified'
+telemetry:
+  logs:
+    logLevel: INFO
