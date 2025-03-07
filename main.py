@@ -125,4 +125,4 @@ schedule.every(5).minutes.do(run_bot)
 while True:
     print(f"🔄 Running Trading Bot at {time.strftime('%Y-%m-%d %H:%M:%S')}")
     schedule.run_pending()
-    time.sleep(10)
+    time.sleep(60)
