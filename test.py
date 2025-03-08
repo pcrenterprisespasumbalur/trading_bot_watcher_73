@@ -1,6 +1,9 @@
 from core.binance_api import binance,binanceus
+import ccxt
 # Increase request timeout
 binance.timeout = 60000  # 60 seconds timeout
+
+
 
 try:
     market_data = binanceus.fetch_ticker("BTC/USDT")
