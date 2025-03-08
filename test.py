@@ -1,15 +1,10 @@
-from binance.client import Client  # Correct import for Binance API client
-import ccxt
-from config.config import API_KEY, API_SECRET
+from core.binance_api import binance,binanceus
+# Increase request timeout
+binance.timeout = 60000  # 60 seconds timeout
 
 try:
-    # Initialize Binance.US client
-    client = Client(API_KEY, API_SECRET, tld="us")  
-
-    # Fetch USDT balance
-    balance = client.get_asset_balance(asset="USDT")
-    print(f"💰 USDT Balance: {balance['free']}")
-
+    market_data = binanceus.fetch_ticker("BTC/USDT")
+    print("✅ Market Data:", market_data)
 except ccxt.NetworkError as e:
     print(f"⚠️ Network error: {e}")
 except ccxt.ExchangeError as e:
