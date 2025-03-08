@@ -1,4 +1,5 @@
 from core.binance_api import binance
+import ccxt
  
 try:
     market_data = binance.fetch_ticker("BTC/USDT")
