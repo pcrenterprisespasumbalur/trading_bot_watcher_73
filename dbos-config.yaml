@@ -2,7 +2,7 @@ name: trading_bot_watcher_73
 language: python
 runtimeConfig:
   start:
-    - "python main.py"
+    - "python test.py"
 telemetry:
   logs:
     logLevel: DEBUG
