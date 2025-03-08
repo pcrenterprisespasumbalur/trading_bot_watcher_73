@@ -7,6 +7,12 @@ binance = ccxt.binance({
     "secret": API_SECRET,
     "options": {"adjustForTimeDifference": True},
 })
+binanceus = ccxt.binanceus({
+    "apiKey": API_KEY,
+    "secret": API_SECRET,
+    "timeout": 30000,  # Increase timeout to 30 seconds
+    "options": {"adjustForTimeDifference": True},
+})
 
 def fetch_market_data(symbol="BTC/USDT", timeframe="5m", limit=100):
     try:
